@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "331369450114",
+    "project_id": "lifelink-4fd65",
+    "storage_bucket": "lifelink-4fd65.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:331369450114:android:237b60f7804e223bfcc29b",
+        "android_client_info": {
+          "package_name": "com.lifelink.app"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCkP6nHIcaTBdVU_GybSK41wpJ8I1lmD3k"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:331369450114:android:c400fff224e8bf99fcc29b",
+        "android_client_info": {
+          "package_name": "com.lifelink.com"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCkP6nHIcaTBdVU_GybSK41wpJ8I1lmD3k"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
