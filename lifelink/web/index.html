@@ -1,52 +1,31 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <!-- Base URL for the app -->
-  <base href="$FLUTTER_BASE_HREF">
-
-  <!-- Meta tags -->
   <meta charset="UTF-8">
-  <meta content="IE=Edge" http-equiv="X-UA-Compatible">
-  <meta name="description" content="A new Flutter project.">
+  <title>LifeLink</title>
+  <base href="/">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui">
 
-  <!-- iOS meta tags & icons -->
-  <meta name="apple-mobile-web-app-capable" content="yes">
-  <meta name="apple-mobile-web-app-status-bar-style" content="black">
-  <meta name="apple-mobile-web-app-title" content="lifelink">
-  <link rel="apple-touch-icon" href="icons/Icon-192.png">
-
-  <!-- Favicon -->
-  <link rel="icon" type="image/png" href="favicon.png"/>
-
-  <!-- Title and manifest -->
-  <title>lifelink</title>
-  <link rel="manifest" href="manifest.json">
-
-  <!-- Firebase SDKs -->
-  <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-app.js"></script>
-  <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-analytics.js"></script>
-  <!-- Add other Firebase services as needed -->
-
-  <!-- Firebase Initialization -->
-  <script>
-    // Your web app's Firebase configuration
-    const firebaseConfig = {
-      apiKey: "AIzaSyCuogywj9lL3IJZfrXU0CurNNd3dyX5Zik",
-      authDomain: "lifelink-4fd65.firebaseapp.com",
-      projectId: "lifelink-4fd65",
-      storageBucket: "lifelink-4fd65.appspot.com",
-      messagingSenderId: "331369450114",
-      appId: "1:331369450114:web:8ec09e7be48d00b3fcc29b",
-      measurementId: "G-T3F0TGN0VD"
-    };
-
-    // Initialize Firebase
-    firebase.initializeApp(firebaseConfig);
-    firebase.analytics();
-  </script>
+  <!-- Add the Firebase products that you want to use -->
+  <script src="https://www.gstatic.com/firebasejs/9.1.0/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.1.0/firebase-auth.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.1.0/firebase-firestore.js"></script>
 </head>
 <body>
-  <!-- Flutter bootstrap -->
-  <script src="flutter_bootstrap.js" async></script>
+  <script>
+    // Your web app's Firebase configuration
+    var firebaseConfig = {
+      apiKey: 'AIzaSyCuogywj9lL3IJZfrXU0CurNNd3dyX5Zik',
+      appId: '1:331369450114:web:84193e4c205ff672fcc29b',
+      messagingSenderId: '331369450114',
+      projectId: 'lifelink-4fd65',
+      authDomain: 'lifelink-4fd65.firebaseapp.com',
+      storageBucket: 'lifelink-4fd65.appspot.com',
+      measurementId: 'G-7F4J1TX77G',
+    };
+    // Initialize Firebase
+    firebase.initializeApp(firebaseConfig);
+  </script>
+  <script src="main.dart.js" type="application/javascript"></script>
 </body>
 </html>

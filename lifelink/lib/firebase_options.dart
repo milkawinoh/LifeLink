@@ -52,7 +52,7 @@ class DefaultFirebaseOptions {
 
   static const FirebaseOptions android = FirebaseOptions(
     apiKey: 'AIzaSyCkP6nHIcaTBdVU_GybSK41wpJ8I1lmD3k',
-    appId: '1:331369450114:android:c400fff224e8bf99fcc29b',
+    appId: '1:331369450114:android:237b60f7804e223bfcc29b',
     messagingSenderId: '331369450114',
     projectId: 'lifelink-4fd65',
     storageBucket: 'lifelink-4fd65.appspot.com',
@@ -64,6 +64,7 @@ class DefaultFirebaseOptions {
     messagingSenderId: '331369450114',
     projectId: 'lifelink-4fd65',
     storageBucket: 'lifelink-4fd65.appspot.com',
+    iosClientId: '331369450114-bg7qp5e050l6gsk0tpg8dfpv68489j3c.apps.googleusercontent.com',
     iosBundleId: 'com.example.lifelink',
   );
 
@@ -73,6 +74,7 @@ class DefaultFirebaseOptions {
     messagingSenderId: '331369450114',
     projectId: 'lifelink-4fd65',
     storageBucket: 'lifelink-4fd65.appspot.com',
+    iosClientId: '331369450114-bg7qp5e050l6gsk0tpg8dfpv68489j3c.apps.googleusercontent.com',
     iosBundleId: 'com.example.lifelink',
   );
 

@@ -1,13 +1,22 @@
-import 'package:flutter/material.dart';
 import 'package:firebase_core/firebase_core.dart';
-import 'package:firebase_auth/firebase_auth.dart';
-import 'package:lifelink/pages/login_page.dart';
-import 'package:lifelink/pages/home_page.dart';
+import 'package:flutter/material.dart';
+import 'package:lifelink/database/event_management_screen.dart';
+import 'package:lifelink/database/forum_screen.dart';
+import 'package:lifelink/database/project_list_screen.dart';
+import 'package:lifelink/database/volunteer_management_screen.dart';
+import 'package:lifelink/firebase_auth/auth_service.dart';
+import 'package:lifelink/firebase_auth/auth_wrapper.dart';
+import 'package:lifelink/firebase_auth/login_screen.dart';
+import 'package:lifelink/firebase_auth/role_selection_screen.dart';
+import 'package:lifelink/home_screen.dart';
+import 'package:provider/provider.dart';
+import 'package:cloud_firestore/cloud_firestore.dart';
 import 'firebase_options.dart';
+
+FirebaseFirestore firestore = FirebaseFirestore.instance;
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
-
   await Firebase.initializeApp(
     options: DefaultFirebaseOptions.currentPlatform,
   );
@@ -19,32 +28,25 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      title: 'LifeLink',
-      theme: ThemeData(
-        primarySwatch: Colors.blue,
+    return ChangeNotifierProvider(
+      create: (context) => AuthService(),
+      child: MaterialApp(
+        title: 'LifeLink',
+        theme: ThemeData(
+          primarySwatch: Colors.blue,
+        ),
+        home: const AuthWrapper(),
+        routes: {
+          '/sign-in': (context) => SignInScreen(),
+          '/role-selection': (context) => const RoleSelectionScreen(),
+          '/home': (context) => const HomeScreen(),
+          '/project-list': (context) => const ProjectListScreen(),
+          '/volunteer-management': (context) =>
+              const VolunteerManagementScreen(),
+          '/forum': (context) => ForumScreen(),
+          '/event-management': (context) => EventManagementScreen(),
+        },
       ),
-      home: const AuthWrapper(),
-    );
-  }
-}
-
-class AuthWrapper extends StatelessWidget {
-  const AuthWrapper({super.key});
-
-  @override
-  Widget build(BuildContext context) {
-    return StreamBuilder<User?>(
-      stream: FirebaseAuth.instance.authStateChanges(),
-      builder: (context, snapshot) {
-        if (snapshot.connectionState == ConnectionState.waiting) {
-          return const CircularProgressIndicator();
-        } else if (snapshot.hasData) {
-          return const HomePage();
-        } else {
-          return const LoginPage();
-        }
-      },
     );
   }
 }
